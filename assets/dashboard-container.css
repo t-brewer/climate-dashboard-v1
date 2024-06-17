@@ -1,0 +1,97 @@
+#dashboard-container {
+
+}
+
+#dashboard-header{
+
+}
+
+#dashboard-row {
+
+}
+
+#graph-column {
+
+}
+
+#graph-container {
+    margin-top: 50px;
+}
+
+#graph-object {
+    margin-top: 0px;
+}
+
+#first-column {
+    /*DOES NOTHING:  margin-top=500px;*/
+}
+
+#dropdown-container {
+    background-color: white;
+    margin-top: 50px;
+}
+#graph-dropdown{
+    /*width: 10px;*/
+    /* It seems I can only change this from the object directly check components.py*/
+}
+
+#co2-slider-container {
+    background-color: white;
+    width: "50%";
+}
+#co2-slider {
+    background-color: white;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#anomaly-slider-container {
+    background-color: white;
+}
+#anomaly-slider{
+    background-color: white;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#sea_level-slider-container {
+    background-color: white;
+}
+#sea_level-slider{
+    background-color: white;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#info-container{
+    /*DOES NOTHING: background-color: black; maybe it's hidden behind*/
+}
+#info-header{
+    padding: 20px;
+    vertical-alignment: center;
+}
+
+}
+
+#deltay-container{
+    /*DOES NOTHING: background-color: black; maybe because the header takes up the whole space.*/
+}
+#deltay-header{
+    text-align: left;
+    padding: 20px;
+}
+
+#portfolio-link{
+    text-align: right;
+    font-size: 12px;
+}
+
+
+
+#co2-source-container {
+    margin-left: 10px;
+    font-size: 12px;
+  vertical-align: text-bottom;
+ }
