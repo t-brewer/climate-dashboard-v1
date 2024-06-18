@@ -51,13 +51,14 @@ def get_prompt(key): # do it as a function here to not have it be loaded all the
 
 def promptGPT(client, prompt,system_content="default", model="gpt-3.5-turbo"):
     default = "You are an optimistic teacher capable of explaining the facts of climate change while inspiring hope."
-    roles = {
+    roles={
+        "default": "You are a qualified scientist who knows a lot about climate change.",
         "peasant": "You are a medieval peasant who does not know anything about climate change.",
         "hunter-gatherer": "You are a hunter gatherer from present day Africa.",
         "business" : "You are a skilled small business owner asking what they can do."
     }
     system = default if system_content=="default" else system_content
-    system = roles["business"]
+    system = roles["default"]
     completion = client.chat.completions.create(
         model=model,
         messages=[

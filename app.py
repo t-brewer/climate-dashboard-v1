@@ -12,7 +12,7 @@ from prompt_builder import get_prompt, promptGPT
 from numpy import random
 import time
 
-useGPT = False
+useGPT = Tru
 
 # -----Preamble / Starting Values ------
 
