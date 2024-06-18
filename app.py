@@ -33,11 +33,11 @@ with open("assets/data/opening_text.txt", "r") as f:
 
 
 # ChatGPT, only do CO2 to minimize prompting
-with open(".env/open-ai-key") as f:
-    api_key = f.read()
+# with open(".env/open-ai-key") as f:
+#     api_key = f.read()
 
 if useGPT:
-    gpt_client = OpenAI(api_key=api_key)
+    gpt_client = OpenAI()
     completion = promptGPT(gpt_client, axis_labels["co2"]["first_prompt"])
     message = completion.choices[0].message.content
 else:
