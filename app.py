@@ -12,11 +12,9 @@ from prompt_builder import get_prompt, promptGPT
 from numpy import random
 import time
 
-useGPT = Tru
+useGPT = False
 
 # -----Preamble / Starting Values ------
-
-
 external_stylesheets = [dbc.themes.BOOTSTRAP]
 data = get_data()  # Can merge other data that is classified by year.
 fig = px.line(
