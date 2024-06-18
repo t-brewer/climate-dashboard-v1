@@ -82,7 +82,7 @@ for k in axis_labels.keys():
         id="{}-prompt-container".format(k)
     )
 
-portfolio_link = dcc.Link("thomasbrewerprojects.com", href="thomasbrewerprojects.com",id="portfolio-link")
+portfolio_link = dcc.Link("https://www.thomasbrewerprojects.com/", href="thomasbrewerprojects.com",id="portfolio-link")
 portfolio_image = html.Img(src='assets/favicon.ico', id="logo-img", style={"width": "25px"})
 
 
