@@ -83,6 +83,6 @@ for k in axis_labels.keys():
     )
 
 portfolio_link = dcc.Link("thomasbrewerprojects.com", href="thomasbrewerprojects.com",id="portfolio-link")
-portfolio_image = html.Img(src='assets/tree-logo.ico', id="logo-img", style={"width": "25px"})
+portfolio_image = html.Img(src='assets/favicon.ico', id="logo-img", style={"width": "25px"})
 
 
