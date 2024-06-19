@@ -12,6 +12,8 @@ from prompt_builder import get_prompt, promptGPT
 from numpy import random
 import time
 
+debug = True
+local_ = True
 useGPT = True
 
 # -----Preamble / Starting Values ------
@@ -23,9 +25,7 @@ fig = px.line(
     y=["co2"]
 )
 graph_object.figure = fig
-#deltay_val = get_delta(data, "co2", axis_labels["co2"]["min_year"],
-#                      axis_labels["co2"]["max_year"])
-#deltay_header.children = "\u0394 M_CO2 = {}".format(deltay_val)
+
 # todo how to make super/subscripts in display text.
 
 with open("assets/data/opening_text.txt", "r") as f:
@@ -33,11 +33,16 @@ with open("assets/data/opening_text.txt", "r") as f:
 
 
 # ChatGPT, only do CO2 to minimize prompting
-# with open(".env/open-ai-key") as f:
-#     api_key = f.read()
+
 
 if useGPT:
-    gpt_client = OpenAI()
+    if local_ :
+        with open(".env/open-ai-key") as f:
+            api_key = f.read()
+        gpt_client = OpenAI(api_key=api_key)
+    else:
+        gpt_client = OpenAI()
+
     completion = promptGPT(gpt_client, axis_labels["co2"]["first_prompt"])
     message = completion.choices[0].message.content
 else:
@@ -265,4 +270,4 @@ def show_hide_element(yaxis):
 
 
 if __name__ == "__main__":
-    app.run_server(dev_tools_props_check=False)
+    app.run_server(debug=debug, dev_tools_props_check=False)
